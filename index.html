@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sehri Finder - Premium Ramadan Distribution Locator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Added Playfair Display and Amiri for the Premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // New Premium Palette - GREEN EDITION
+              midnight: '#03120E', // Deepest Green/Black (was Blue #0F1729)
+              emerald: '#0D5C3E', // Rich Jewel Green
+              navy: '#0A291E', // Dark Forest Green (Replacing the Blue 'Navy' slot)
+              
+              // Accents
+              gold: '#D4AF37',
+              'gold-bright': '#F4C430',
+              amber: '#F4A460',
+              silver: '#E8E8E8',
+              
+              // Legacy/Compat mappings (so existing components don't break immediately)
+              primary: '#0D5C3E', // Mapped to Emerald
+              'primary-dark': '#03120E', // Mapped to Midnight
+              cream: '#faf8f3',
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+              brand: ['Amiri', 'serif'],
+              display: ['Cinzel', 'serif'],
+            },
+            backgroundImage: {
+              'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+              'midnight-gradient': 'linear-gradient(to bottom, #03120E, #0A291E)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      body {
+        background-color: #faf8f3;
+        color: #03120E;
+      }
+
+      /* Animations for the "Awakening" Theme */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-15px) rotate(2deg); }
+      }
+      
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.8; transform: scale(1.2); }
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+        50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      .animate-float-delayed {
+        animation: float 8s ease-in-out infinite;
+        animation-delay: 2s;
+      }
+
+      .animate-twinkle {
+        animation: twinkle 4s ease-in-out infinite;
+      }
+
+      /* Glassmorphism Utilities */
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .glass-dark {
+        /* Updated RGBA to match the new #03120E Midnight Green */
+        background: rgba(3, 18, 14, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
